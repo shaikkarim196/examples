@@ -2,7 +2,7 @@ node{
 stage('check out')
 {
    echo "Messgae from check out stage"
-   git credentialsId: 'Git_Token', url: 'https://github.com/shaikkarim196/examples.git'
+   git branch: 'main', credentialsId: 'Git_Token', url: 'https://github.com/shaikkarim196/examples.git'
 }
 stage('Bazel build')
 {
