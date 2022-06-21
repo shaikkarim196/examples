@@ -1,0 +1,16 @@
+node{
+stage('check out')
+{
+   echo "Messgae from check out stage"
+   git branch: 'main', credentialsId: 'Git_Token', url: 'https://github.com/shaikkarim196/examples.git'
+}
+stage('Bazel build')
+{
+   echo "Messgae from bazel build stage"
+   sh '''
+   ls -la
+   cd cpp-tutorial/stage3
+   bazel build //main:hello-world
+   '''
+}
+}
