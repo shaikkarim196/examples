@@ -16,7 +16,7 @@ stage('Bazel build')
 stage("Archive Artifacts")
 {
    //sh '''
-      archiveArtifacts artifacts: 'main/BUILD'
+      archiveArtifacts artifacts: 'cpp-tutorial/stage1/main/BUILD'
    //'''
 }
 }
