@@ -13,4 +13,10 @@ stage('Bazel build')
    bazel build //main:hello-world
    '''
 }
+stage("Archive Artifacts")
+{
+   //sh '''
+      archiveArtifacts artifacts: 'main/BUILD'
+   //'''
+}
 }
